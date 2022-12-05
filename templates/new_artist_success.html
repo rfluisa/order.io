@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<nav>
+    <p class="icon">Order.io</p>
+</nav>
+<div class="card eight">
+    <h2 class="title">Usuário registrado com sucesso!</h2>
+    <p>Faça seu login</p>
+    <a href={% url 'login-artist' %} >LOG IN</a>
+</div>
+{% endblock %}

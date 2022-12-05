@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<nav>
+    <p class="icon">Order.io</p>
+    {% if user %}
+    <span class="artistButtons">
+      <a class="buttonCifra" href="/internal/music">PEDIDOS</a>
+      <a class="buttonCifra logout" href="/internal/logout">LOGOUT</a>
+    </span>
+	  {% endif %}
+</nav>
+<div class="card">
+    <h2 class="title">Ouvinte</h2>
+    <form action="" method="" class="form">
+        <p>Para fazer um pedido, acesse order-io com a url do artista:</p>
+        <br>
+        <p>order-io.herokuapp.com/urlDoArtista</p>
+    </form>
+</div>
+<div class="card two">
+    <h2 class="title">Artista</h2>
+    <form action="" method="" class="form">
+        {% csrf_token %}
+            <a href={% url 'login-artist' %} >LOG IN</a>
+            <a href={% url 'new-artist-view'%}>REGISTRAR</a>
+    </form>
+</div>
+{% endblock %}
+

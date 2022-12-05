@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<nav>
+    <p class="icon">Order.io</p>
+    {% if user %}
+    <span class="artistButtons">
+      <a class="buttonCifra" href="/internal/music">PEDIDOS</a>
+      <a class="buttonCifra logout" href="/internal/logout">LOGOUT</a>
+    </span>
+	{% endif %}
+</nav>
+
+<div class="card three">
+    <h3>Por favor contribua com a minha pesquisa de TCC</h3>
+    <p>É um formulário curto, levará menos de 5 minutos!</p>
+    <p>Muito obrigada!</p>
+    <a target="_blank"  href="https://forms.gle/DucYQhiBow1Bf5c27">PESQUISA</a>
+</div>
+
+<div class="card four">
+    <h2 class="title">Lista de Pedidos</h2>
+    <table class="roundedCorners">
+        <tr>
+            <th>Artista</th>
+            <th>Música</th>
+            <th></th>
+        </tr>
+        {% for order in orders %}
+        <tr>
+            <td>{{order.music.artist}}</td>
+            <td>{{order.music.title}}</td>
+            <td><a class='buttonCifra' target="_blank" href={% url 'detail-music' order.pk %}>Cifra</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

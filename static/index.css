@@ -1,0 +1,336 @@
+/*CSS RESET*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*CSS RESET*/
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
+}
+
+nav {
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    box-shadow: 5px 10px 18px #888888;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f1f1f1;
+}
+
+.artistButtons{
+    padding-right: 0.5rem;
+}
+
+.icon{
+    padding-left: 0.5rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
+    border-radius: 10px;
+    font-weight: 400;
+    color: #ffffff;
+    background: linear-gradient(53.13deg,#dc4c11 10.71%,#feab2e);
+    box-shadow: 5px 10px 18px #888888;
+}
+
+.two{
+    background: linear-gradient(69.06deg,#b84fdd -26.76%,#4965f4 44.6%,#2efb74 132.54%);
+}
+
+.three{
+    background: linear-gradient(53.13deg, #25b812 10.71%, #27ff0b);
+}
+
+.four{
+    background: linear-gradient(69.06deg,#b84fdd -26.76%,#4965f4 44.6%,#2efb74 132.54%);
+}
+
+.five{
+    background: linear-gradient(53.13deg, #6812b8 10.71%, #ba25ff);
+}
+
+.two p, .four p{
+    padding: 1rem;
+}
+
+.three h3{
+    margin: 1.5rem;
+}
+
+.title{
+    font-weight: 500;
+    font-size: 24px;
+    padding: 1rem;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.infoBanda{
+    margin: 0.5rem;
+    align-self: flex-start;
+}
+
+.infoBanda p{
+    padding: 0.5rem;
+}
+
+.artista {
+    display: flex;
+    flex-direction: column;
+}
+
+
+input, button, a{
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+     border-radius: 20px;
+     border: 1px solid #ffffff;
+     color: #000000;
+     width: 250px;
+     height: 30px;
+     /*padding-left: 10px;*/
+     margin: 1rem;
+     text-align: center;
+     text-decoration: none;
+}
+
+a{
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+    font-size: 100%;
+}
+
+input:focus{
+    outline: none;
+     border: 1px solid #dae0d8;
+     color: #000000;
+}
+
+button, a {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #000000;
+    font-weight: 700;
+}
+
+
+button:hover, a:hover{
+    border: 1px solid #ffffff;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.logout{
+    background-color: #ffffff;
+    color: #b92222;
+    border: 1px solid #ffffff;
+}
+
+.logout:hover{
+    background-color: #b92222;
+    color: #ffffff;
+    border: 1px solid #b92222;
+}
+
+.switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 100px;
+}
+
+.switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #000000;
+}
+
+input:checked + .slider:before {
+  transform: translateX(65px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.five {
+    display: table;
+}
+
+.five h2{
+    align-self: center;
+}
+
+.eight .helptext{
+    padding-top: 0.25rem;
+    font-size: small;
+    margin-bottom: 2rem;
+}
+
+.eight form {
+    display: flex;
+    flex-direction: column;
+}
+
+table{
+    
+    margin: 0 auto;
+}
+
+table.roundedCorners { 
+  border: 1px solid #ffffff;
+  border-radius: 13px; 
+  border-spacing: 0;
+}
+
+table.roundedCorners td, 
+table.roundedCorners th { 
+  border-bottom: 1px solid #ffffff;
+  padding: 10px; 
+}
+
+table.roundedCorners tr:last-child > td {
+  border-bottom: none;
+}
+
+.buttonCifra{
+    width: 100px;
+}
+
+.popUp{
+    width: 30vw;
+    height: 30vh;
+    background: #ffffff;
+    position: relative;
+    margin: 0 auto;
+    top: -20rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    display: none;
+}
+
+.x{
+    align-self: flex-end;
+    position: relative;
+    left: 15rem;
+    top: 0.5rem;
+}
+
+.pedidoEnviado{
+    align-self: center;
+}
+
+.errorlist{
+    display: none;
+}
+
+@media screen and (max-width: 480px){
+    .card{
+        width: 75vw;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 481px){
+    .card{
+        width: 60vh;
+        height: auto;
+
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .card{
+        width: 50vw;
+    }
+}

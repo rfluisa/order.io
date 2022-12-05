@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<nav>
+  <p class="icon">Order.io</p>
+</nav>
+<div class="card eight">
+  <h2 class="title">Registrar</h2>
+  <form action="create" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" value="submit">ENVIAR</button>
+  </form>
+</div>
+{% endblock %}

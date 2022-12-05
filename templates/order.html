@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<nav>
+  <p class="icon">Order.io</p>
+</nav>
+<div class="card three">
+  <h2 class="title">{{ username }}</h2>
+  <h3>Faça seu pedido!</h3>
+  <form action="{% url 'new-order' username %}" method="post" class="form">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" onclick="successAlert()" value="Submit">ENVIAR</button>
+  </form>
+</div>
+{% endblock %}
